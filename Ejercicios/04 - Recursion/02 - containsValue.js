@@ -17,17 +17,7 @@ INPUT ---> ({sa: "gd", {dsf: 43, ds: 425}, gsg: "jt"}, gsg)
 OUTPUT --> false
 */
 
-const containsValue = function (obj, value) {
-   let result = false;
-   for (let key in obj) {
-      if (obj[key] === value) {
-         result = true;
-      } else if (typeof obj[key] === 'object') {
-         result = containsValue(obj[key], value);
-      }
-   }
-   return result;
-};
+const containsValue = function (obj, value) {};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = containsValue;

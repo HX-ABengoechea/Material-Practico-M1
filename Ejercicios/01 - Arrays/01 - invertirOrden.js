@@ -19,13 +19,7 @@ INPUT ----> [1, 2, 435, 23, 32, 4, 4, 768]
 OUTPUT ---> [4, 4, 2, 1]
 */
 
-function invertirOrden(array) {
-   return array
-      .filter((e) => {
-         return e.toString().length === 1;
-      })
-      .reverse();
-}
+function invertirOrden(array) {}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = invertirOrden;

@@ -28,22 +28,7 @@ revises.
 3) La función devuelve un arreglo de strings.
 */
 
-var queueControlAccess = function (queue, event) {
-   let arr = [];
-   let access = [];
-   while (queue.size()) {
-      let subject = queue.dequeue();
-      if (
-         subject.age >= 18 &&
-         subject.ticket.event === event &&
-         !access.includes(subject.ticket.number)
-      ) {
-         access.push(subject.ticket.number);
-         arr.push(subject.fullname);
-      }
-   }
-   return arr;
-};
+var queueControlAccess = function (queue, event) {};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = queueControlAccess;

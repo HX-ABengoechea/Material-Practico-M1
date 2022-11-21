@@ -14,29 +14,7 @@ INPUT ----> [2, 6, 5, 3, 8, 5, 0]
 OUTPUT ---> [0, 2, 3, 5, 5, 6, 8]
 */
 
-function mergeSort(array) {
-   if (array.length === 1) return array;
-   let mediumArray = Math.floor(array.length / 2);
-   let leftArray = array.slice(0, mediumArray);
-   let rightArray = array.slice(mediumArray);
-   return merge(mergeSort(leftArray), mergeSort(rightArray));
-}
-
-function merge(left, right) {
-   var result = [];
-   var indexLeft = 0;
-   var indexRight = 0;
-   while (indexLeft < left.length && indexRight < right.length) {
-      if (left[indexLeft] < right[indexRight]) {
-         result.push(left[indexLeft]);
-         indexLeft++;
-      } else {
-         result.push(right[indexRight]);
-         indexRight++;
-      }
-   }
-   return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight));
-}
+function mergeSort(array) {}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = mergeSort;

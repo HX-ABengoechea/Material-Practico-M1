@@ -19,24 +19,7 @@ OUTPUT --> "aibmoloC anitnegrA"
 INPUT ---> Mar Azulado oro
 OUTPUT --> "raM odaluzA oro"
 */
-function stackEfectoEspejo(str) {
-   const instacia1DeStack = new Stack();
-   let stringInvertido = '';
-   for (let i = 0; i < str.length; i++) {
-      if (str[i] === ' ') {
-         while (instacia1DeStack.size() > 0) {
-            stringInvertido = stringInvertido + instacia1DeStack.quitar();
-         }
-         stringInvertido = stringInvertido + str[i];
-      } else {
-         instacia1DeStack.colocar(str[i]);
-      }
-   }
-   while (instacia1DeStack.size() > 0) {
-      stringInvertido = stringInvertido + instacia1DeStack.quitar();
-   }
-   return stringInvertido;
-}
+function stackEfectoEspejo(str) {}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = stackEfectoEspejo;
