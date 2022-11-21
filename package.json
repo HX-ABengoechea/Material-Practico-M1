@@ -1,0 +1,23 @@
+{
+   "name": "material_de_practica",
+   "version": "1.0.0",
+   "description": "Este material es para repasar los temas del M1",
+   "main": "index.js",
+   "directories": {
+      "test": "test"
+   },
+   "scripts": {
+      "test": "jest --collectCoverage=false",
+      "test:old": "jest",
+      "test:01": "jest --verbose --detectOpenHandles 01 - Arrays.test.js",
+      "test:02": "jest --verbose --detectOpenHandles 02 - Objects.test.js"
+   },
+   "author": "Henry",
+   "license": "ISC",
+   "dependencies": {
+      "flatted": "^2.0.0",
+      "chai": "^4.3.6",
+      "jest": "^27.5.1",
+      "tape": "^5.5.2"
+   }
+}
