@@ -16,19 +16,7 @@ INPUT ----> [352, 547, 438, 923, 231]
 OUTPUT ---> {352: 10, 547: 16, 438: 15, 923: 14, 231: 6}
 */
 
-function deArregloAObjeto(array) {
-   var obj = {};
-   array.forEach((num) => {
-      var acu = 0;
-      num.toString()
-         .split('')
-         .forEach((n) => {
-            acu = acu + Number(n);
-         });
-      obj[num] = acu;
-   });
-   return obj;
-}
+function deArregloAObjeto(array) {}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = deArregloAObjeto;

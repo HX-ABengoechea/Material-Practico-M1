@@ -17,13 +17,7 @@ INPUT ----> [5, 5, 4]
 OUTPUT ---> 100
 */
 
-const multiplyArray = function (array) {
-   if (array.length === 0) {
-      return true;
-   } else {
-      return array.shift() * multiplyArray(array);
-   }
-};
+const multiplyArray = function (array) {};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = multiplyArray;

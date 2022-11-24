@@ -19,19 +19,7 @@ El método "height" debe retornar la altura que tiene el árbol. Es decir, la ca
 (2)   (9)  (11)  (15)    ----> Nivel 2
 */
 
-BinarySearchTree2.prototype.height = function (value) {
-   if (!this.left && !this.right) {
-      return 0;
-   } else {
-      if (this.left && !this.right) {
-         return this.left.height() + 1;
-      } else if (!this.left && this.right) {
-         return this.right.height() + 1;
-      } else {
-         return Math.max(this.left.height() + 1, this.right.height() + 1);
-      }
-   }
-};
+BinarySearchTree2.prototype.height = function (value) {};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = BinarySearchTree2;

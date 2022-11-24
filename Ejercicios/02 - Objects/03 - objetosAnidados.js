@@ -22,24 +22,7 @@ INPUT ----> undefined
 OUTPUT ---> 0
 */
 
-function objetosAnidados(object) {
-   if (typeof object !== 'object') {
-      return 0;
-   } else {
-      var results = [];
-      var aux = 1;
-      var aca = function (obj) {
-         for (let prop in obj) {
-            if (typeof obj[prop] === 'object') {
-               aux = aux + 1;
-               aca(obj[prop]);
-            }
-         }
-      };
-      aca(object);
-      return aux;
-   }
-}
+function objetosAnidados(object) {}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = objetosAnidados;
