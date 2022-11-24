@@ -20,11 +20,14 @@ OUTPUT ---> [4, 4, 2, 1]
 */
 
 function invertirOrden(array) {
-   return array
-      .filter((e) => {
-         return e.toString().length === 1;
-      })
-      .reverse();
+   let arregloConUnDigito = array.filter((e) => {
+      return e.toString().length === 1;
+   });
+   let arregloOrdenado = [];
+   for (let i = arregloConUnDigito.length - 1; i >= 0; i--) {
+      arregloOrdenado.push(arregloConUnDigito[i]);
+   }
+   return arregloOrdenado;
 }
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
