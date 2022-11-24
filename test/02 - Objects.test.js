@@ -46,7 +46,7 @@ describe('OBJETOS ANIDADOS', function () {
       expect(
          objetosAnidados({
             3: 1,
-            2: 2,
+            2: { 2: 55, 56: 8787, 45: { 7: 5 } },
             5: { 6: 6, 7: { 8: 8, 9: { 10: 10 } } },
          })
       ).toStrictEqual(4);
