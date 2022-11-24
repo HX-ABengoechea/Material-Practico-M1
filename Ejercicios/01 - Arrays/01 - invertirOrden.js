@@ -19,16 +19,7 @@ INPUT ----> [1, 2, 435, 23, 32, 4, 4, 768]
 OUTPUT ---> [4, 4, 2, 1]
 */
 
-function invertirOrden(array) {
-   let arregloConUnDigito = array.filter((e) => {
-      return e.toString().length === 1;
-   });
-   let arregloOrdenado = [];
-   for (let i = arregloConUnDigito.length - 1; i >= 0; i--) {
-      arregloOrdenado.push(arregloConUnDigito[i]);
-   }
-   return arregloOrdenado;
-}
+function invertirOrden(array) {}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = invertirOrden;
