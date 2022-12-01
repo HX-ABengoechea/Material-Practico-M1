@@ -28,7 +28,7 @@ LinkedList3.prototype.insert = function (data, pos) {
    }
    valoresRestantes.push(current.value);
 
-   valoresRestantes.forEach((val) => {
+   valoresRestantes.forEach(() => {
       this.remove();
    });
 
