@@ -18,7 +18,29 @@ INPUT ----> Head --> [4] --> [5] --> [3]
 OUTPUT ---> Head --> [5] --> [4] --> [1]
 */
 
-LinkedList2.prototype.order = function () {};
+LinkedList2.prototype.order = function () {
+   var valores = [];
+   var current = this.head;
+
+   while (current.next) {
+      valores.push(current.value);
+      current = current.next;
+   }
+   valores.push(current.value);
+
+   for (let i = 0; i < valores.length; i++) {
+      this.remove();
+   }
+
+   valores
+      .sort()
+      .reverse()
+      .forEach((value) => {
+         this.add(value);
+      });
+
+   return this;
+};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = LinkedList2;

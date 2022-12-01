@@ -19,6 +19,7 @@ OUTPUT --> Stack { array = ["aibmoloC", anitnegrA"] }
 INPUT ---> Mar Azulado oro
 OUTPUT --> Stack { array = ["raM", odaluzA", "oro"] }
 */
+
 function stackEfectoEspejo(frase) {
    var nuevoStack = new Stack();
    var arrPalabrasInvertidas = frase.split(' ').map((word) => {

@@ -30,30 +30,24 @@ revises.
 */
 
 var queueControlAccess = function (queue, event) {
-   const fila = queue.array;
-
-   const cumpleEdadyEvento = fila
-      .filter((persona) => {
-         return persona.age >= 18;
-      })
-      .filter((persona) => {
-         return persona.ticket.event === event;
-      });
-
-   let ingresantes = [];
-   for (let i = 0; i < cumpleEdadyEvento.length; i++) {
-      let numOfTicket = cumpleEdadyEvento[i].ticket.number;
+   const cache = {};
+   const arr = [];
+   const obj = new Queue();
+   while (queue.size() > 0) {
+      const elem = queue.dequeue();
+      const number = elem.ticket.number;
       if (
-         !ingresantes.filter((p) => {
-            return p.ticket.number === numOfTicket;
-         })[0]
+         cache[number] === undefined &&
+         typeof number === 'number' &&
+         elem.age >= 18 &&
+         elem.ticket.event === event
       ) {
-         ingresantes.push(cumpleEdadyEvento[i]);
+         cache[number] = true;
+         arr.push(elem.fullname);
+         obj.enqueue(elem);
       }
    }
-   return ingresantes.map((p) => {
-      return p.fullname;
-   });
+   return arr;
 };
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
