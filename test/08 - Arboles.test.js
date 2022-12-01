@@ -1,6 +1,6 @@
 const { expect } = require('chai');
-const BinarySearchTree1 = require('../Ejercicios/07 - Arboles/01 - search');
-const BinarySearchTree2 = require('../Ejercicios/07 - Arboles/02 - height');
+const BinarySearchTree1 = require('../Ejercicios/08 - Arboles/01 - search');
+const BinarySearchTree2 = require('../Ejercicios/08 - Arboles/02 - height');
 
 describe('SEARCH', function () {
    var tree1 = new BinarySearchTree1(1);

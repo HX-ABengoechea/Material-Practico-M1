@@ -1,7 +1,7 @@
 const { expect } = require('chai');
-const LinkedList1 = require('../Ejercicios/06 - LinkedList/01 - size');
-const LinkedList2 = require('../Ejercicios/06 - LinkedList/02 - order');
-const LinkedList3 = require('../Ejercicios/06 - LinkedList/03 - insert');
+const LinkedList1 = require('../Ejercicios/07 - LinkedList/01 - size');
+const LinkedList2 = require('../Ejercicios/07 - LinkedList/02 - order');
+const LinkedList3 = require('../Ejercicios/07 - LinkedList/03 - insert');
 
 describe('SIZE', function () {
    var linkedList = new LinkedList1();

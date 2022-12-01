@@ -1,8 +1,8 @@
-const bubbleSort = require('../Ejercicios/08 - Algoritmos/01 - bubbleSort');
-const insertionSort = require('../Ejercicios/08 - Algoritmos/02 - insertionSort');
-const selectionSort = require('../Ejercicios/08 - Algoritmos/03 - selectionSort');
-const quickSort = require('../Ejercicios/08 - Algoritmos/04 - quickSort');
-const mergeSort = require('../Ejercicios/08 - Algoritmos/05 - mergeSort');
+const bubbleSort = require('../Ejercicios/09 - Algoritmos/01 - bubbleSort');
+const insertionSort = require('../Ejercicios/09 - Algoritmos/02 - insertionSort');
+const selectionSort = require('../Ejercicios/09 - Algoritmos/03 - selectionSort');
+const quickSort = require('../Ejercicios/09 - Algoritmos/04 - quickSort');
+const mergeSort = require('../Ejercicios/09 - Algoritmos/05 - mergeSort');
 
 describe('BUBBLE SORT', function () {
    it('Debe retornar el array ordenado de menor a mayor', function () {

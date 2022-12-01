@@ -16,6 +16,12 @@ describe('INVERTIR ORDEN', function () {
          7, 8, 9,
       ]);
    });
+   it('No puedes utilizar el método "reverse" de Array', function () {
+      Array.prototype.reverse = function () {
+         return [];
+      };
+      expect(invertirOrden([2, 5, 8, 7])).toStrictEqual([7, 8, 5, 2]);
+   });
 });
 
 // 02

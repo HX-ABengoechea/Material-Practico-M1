@@ -11,7 +11,7 @@ función.
 ⛔️ IMPORTANTE ⛔️
 1) NO puedes utilizar el método "reverse".
 2) Recuerda que la función debe devolver el nuevo arreglo invertido.
-3) Recuerda que lo que recibes son números, y debes devovler un arreglo de números.
+3) Recuerda que sólo recibes son números, y debes devovler un arreglo de números.
 
 
 📝 EJEMPLO 📝

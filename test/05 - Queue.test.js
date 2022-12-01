@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const queueControlAccess = require('../Ejercicios/05 - Stacks & Queues/01 - queueControlAccess');
+const queueControlAccess = require('../Ejercicios/05 - Queues/01 - queueControlAccess');
 const { Queue } = require('../auxiliar');
 
 describe('QUEUE CONTROL ACCESS', function () {

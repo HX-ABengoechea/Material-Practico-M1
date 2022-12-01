@@ -26,9 +26,35 @@ Finalmente la función debe devolver un arreglo con el nombre de todas las perso
 2) Puedes utilizar los métodos de la Queue. Esto se encuentran en el archivo "auxiliar.js". Te invitamos a que los
 revises.
 3) La función devuelve un arreglo de strings.
+4) La queue trae una propiedad llamada "array" con todas las personas.
 */
 
-var queueControlAccess = function (queue, event) {};
+var queueControlAccess = function (queue, event) {
+   const fila = queue.array;
+
+   const cumpleEdadyEvento = fila
+      .filter((persona) => {
+         return persona.age >= 18;
+      })
+      .filter((persona) => {
+         return persona.ticket.event === event;
+      });
+
+   let ingresantes = [];
+   for (let i = 0; i < cumpleEdadyEvento.length; i++) {
+      let numOfTicket = cumpleEdadyEvento[i].ticket.number;
+      if (
+         !ingresantes.filter((p) => {
+            return p.ticket.number === numOfTicket;
+         })[0]
+      ) {
+         ingresantes.push(cumpleEdadyEvento[i]);
+      }
+   }
+   return ingresantes.map((p) => {
+      return p.fullname;
+   });
+};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = queueControlAccess;

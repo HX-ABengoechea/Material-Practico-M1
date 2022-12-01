@@ -1,4 +1,4 @@
-const stackEfectoEspejo = require('../Ejercicios/05 - Stacks & Queues/02 - stackEfectoEspejo');
+const stackEfectoEspejo = require('../Ejercicios/06 - Stacks/01 - stackEfectoEspejo');
 
 describe('STACK EFECTO ESPEJO', function () {
    it('Debe devolver el string invertido', function () {
