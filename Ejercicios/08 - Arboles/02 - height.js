@@ -4,7 +4,7 @@ const BinarySearchTree2 = BinarySearchTree;
 
 /* 1️⃣ ***** BINARYSEARCHTREE - 02 ***** - height() 1️⃣:
 
-El método "height" debe retornar la altura que tiene el árbol. Es decir, la cantidad de nieveles que posee.
+El método "height" debe retornar la altura que tiene el árbol. Es decir, la cantidad de niveles que posee.
 
 
 ⛔️ IMPORTANTE ⛔️
@@ -19,7 +19,13 @@ El método "height" debe retornar la altura que tiene el árbol. Es decir, la ca
 (2)   (9)  (11)  (15)    ----> Nivel 2
 */
 
-BinarySearchTree2.prototype.height = function (value) {};
+BinarySearchTree2.prototype.height = function () {
+   const calc = (node) => {
+      if (!node) return 0;
+      return Math.max(1 + calc(node.left), 1 + calc(node.right));
+   };
+   return calc(this);
+};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = BinarySearchTree2;
