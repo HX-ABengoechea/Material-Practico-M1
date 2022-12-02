@@ -12,33 +12,7 @@ El método insert recibirá una posición y un dato. Este dato debe ser agregado
 2) Toma a "head" como la posición 1.
 */
 
-LinkedList3.prototype.insert = function (data, pos) {
-   var actualPosition = 1;
-   var current = this.head;
-
-   while (current.next && pos - 1 !== actualPosition) {
-      current = current.next;
-      actualPosition++;
-   }
-
-   var valoresRestantes = [];
-   while (current.next) {
-      current = current.next;
-      valoresRestantes.push(current.value);
-   }
-   valoresRestantes.push(current.value);
-
-   valoresRestantes.forEach(() => {
-      this.remove();
-   });
-
-   this.add(data);
-
-   valoresRestantes.forEach((val) => {
-      this.add(val);
-   });
-   return this;
-};
+LinkedList3.prototype.insert = function (data, pos) {};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = LinkedList3;

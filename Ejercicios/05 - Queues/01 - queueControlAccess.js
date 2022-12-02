@@ -29,26 +29,7 @@ revises.
 4) La queue trae una propiedad llamada "array" con todas las personas.
 */
 
-var queueControlAccess = function (queue, event) {
-   const cache = {};
-   const arr = [];
-   const obj = new Queue();
-   while (queue.size() > 0) {
-      const elem = queue.dequeue();
-      const number = elem.ticket.number;
-      if (
-         cache[number] === undefined &&
-         typeof number === 'number' &&
-         elem.age >= 18 &&
-         elem.ticket.event === event
-      ) {
-         cache[number] = true;
-         arr.push(elem.fullname);
-         obj.enqueue(elem);
-      }
-   }
-   return arr;
-};
+var queueControlAccess = function (queue, event) {};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = queueControlAccess;

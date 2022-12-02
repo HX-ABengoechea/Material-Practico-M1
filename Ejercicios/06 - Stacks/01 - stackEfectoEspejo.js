@@ -20,17 +20,7 @@ INPUT ---> Mar Azulado oro
 OUTPUT --> Stack { array = ["raM", odaluzA", "oro"] }
 */
 
-function stackEfectoEspejo(frase) {
-   var nuevoStack = new Stack();
-   var arrPalabrasInvertidas = frase.split(' ').map((word) => {
-      return word.split('').reverse().join('');
-   });
-
-   arrPalabrasInvertidas.forEach((word) => {
-      nuevoStack.colocar(word);
-   });
-   return nuevoStack;
-}
+function stackEfectoEspejo(frase) {}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = stackEfectoEspejo;

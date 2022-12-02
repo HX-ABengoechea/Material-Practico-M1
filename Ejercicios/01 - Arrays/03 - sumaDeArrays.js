@@ -19,19 +19,7 @@ INPUT ----> [[1, 3], [10, 20], [4, 5], 2]
 OUTPUT ---> [4, 30, 9, 2]
 */
 
-function sumaDeArrays(array) {
-   return array.map((num) => {
-      if (typeof num === 'object') {
-         var sum = 0;
-         num.forEach((num) => {
-            sum += num;
-         });
-         return sum;
-      } else {
-         return num;
-      }
-   });
-}
+function sumaDeArrays(array) {}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = sumaDeArrays;

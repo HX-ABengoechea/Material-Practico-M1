@@ -16,23 +16,7 @@ INPUT ----> ([4, 34, 65, 84, 32, 5, 72], [19, 323, -43, 72, 94, 632, 23])
 OUTPUT ---> 72
 */
 
-function numeroEnComun(arrayUno, arrayDos) {
-   for (let i = 0; i < arrayUno.length; i++) {
-      for (let j = 0; j < arrayDos.length; j++) {
-         if (arrayUno[i] === arrayDos[j]) {
-            return arrayUno[i];
-         }
-      }
-   }
-   var arr = arrayUno.concat(arrayDos);
-   var minNum = arr[0];
-   for (let i = 1; i < arr.length; i++) {
-      if (arr[i] < minNum) {
-         minNum = arr[i];
-      }
-   }
-   return minNum;
-}
+function numeroEnComun(arrayUno, arrayDos) {}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = numeroEnComun;

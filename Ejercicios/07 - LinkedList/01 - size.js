@@ -17,9 +17,7 @@ INPUT ----> Head --> [2] --> [54] --> [23]
 OUTPUT ---> 3
 */
 
-LinkedList1.prototype.size = function () {
-   return this.length;
-};
+LinkedList1.prototype.size = function () {};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = LinkedList1;
