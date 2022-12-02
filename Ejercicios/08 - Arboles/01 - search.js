@@ -13,7 +13,24 @@ el valor'.
 1) Puedes revisar los métodos que ya existen de "BinarySearchTree" en el archivo "auxiliar.js".
 */
 
-BinarySearchTree1.prototype.search = function (value) {};
+BinarySearchTree1.prototype.search = function (value) {
+   if (value === this.value) {
+      return this.value;
+   }
+
+   if (value > this.value) {
+      if (this.right) {
+         return this.right.search(value);
+      }
+   }
+
+   if (value < this.value) {
+      if (this.left) {
+         return this.left.search(value);
+      }
+   }
+   return 'No se encontro el valor';
+};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = BinarySearchTree1;

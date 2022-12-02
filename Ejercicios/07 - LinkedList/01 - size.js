@@ -9,7 +9,7 @@ tiene la lista enlazada.
 
 
 ⛔️ IMPORTANTE ⛔️
-1) Puedes revisar los métodos que ya existen de "LinkedList" en el archivo "auxiliar.js".
+1) Puedes revisar los métodos y propiedades que ya existen de "LinkedList" en el archivo "auxiliar.js".
 
 
 📝 EJEMPLO 📝
@@ -17,7 +17,9 @@ INPUT ----> Head --> [2] --> [54] --> [23]
 OUTPUT ---> 3
 */
 
-LinkedList1.prototype.size = function () {};
+LinkedList1.prototype.size = function () {
+   return this.length;
+};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = LinkedList1;

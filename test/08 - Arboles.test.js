@@ -1,6 +1,6 @@
 const { expect } = require('chai');
-const BinarySearchTree1 = require('../Ejercicios/07 - Arboles/01 - search');
-const BinarySearchTree2 = require('../Ejercicios/07 - Arboles/02 - height');
+const BinarySearchTree1 = require('../Ejercicios/08 - Arboles/01 - search');
+const BinarySearchTree2 = require('../Ejercicios/08 - Arboles/02 - height');
 
 describe('SEARCH', function () {
    var tree1 = new BinarySearchTree1(1);
@@ -28,7 +28,7 @@ describe('HEIGHT', function () {
    tree2.insert(6);
 
    it('Debe retornar el nivel maximo del arbol', function () {
-      expect(tree2.height()).to.equal(5);
+      expect(tree2.height()).to.equal(6);
    });
 
    var tree3 = new BinarySearchTree2(6);
@@ -39,6 +39,18 @@ describe('HEIGHT', function () {
    tree3.insert(7);
    tree3.insert(9);
    it('Debe retornar el nivel maximo del arbol', function () {
-      expect(tree3.height()).to.equal(2);
+      expect(tree3.height()).to.equal(3);
+   });
+
+   var tree4 = new BinarySearchTree2(9);
+   tree4.insert(5);
+   tree4.insert(12);
+   tree4.insert(14);
+   tree4.insert(3);
+   tree4.insert(7);
+   tree4.insert(10);
+   tree4.insert(11);
+   it('Debe retornar el nivel maximo del arbol', function () {
+      expect(tree3.height()).to.equal(3);
    });
 });
