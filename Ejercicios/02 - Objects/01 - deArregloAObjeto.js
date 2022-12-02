@@ -16,7 +16,19 @@ INPUT ----> [352, 547, 438, 923, 231]
 OUTPUT ---> {352: 10, 547: 16, 438: 15, 923: 14, 231: 6}
 */
 
-function deArregloAObjeto(array) {}
+function deArregloAObjeto(array) {
+   var obj = {};
+   array.forEach((num) => {
+      var sum = 0;
+      num.toString()
+         .split('')
+         .forEach((n) => {
+            sum += Number(n);
+         });
+      obj[num] = sum;
+   });
+   return obj;
+}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = deArregloAObjeto;

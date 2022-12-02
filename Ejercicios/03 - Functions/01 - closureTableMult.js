@@ -19,7 +19,11 @@ multByThree(3) --> (-9)
 multByThree(4) --> (-12)
 */
 
-var closureTableMult = function (multiplier) {};
+var closureTableMult = function (multiplier) {
+   return function (num) {
+      return num * multiplier;
+   };
+};
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = closureTableMult;

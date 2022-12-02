@@ -14,7 +14,13 @@ INPUT ----> {asc: undefined, oasf: undefined, peqo: undefined}
 OUTPUT ---> {asc: "csa", oasf: "fsao", peqo: "oqep"}
 */
 
-function objetoEspejo(object) {}
+function objetoEspejo(object) {
+   if (!Object.keys(object).length) return false;
+   for (let prop in object) {
+      object[prop] = prop.toString().split('').reverse().join('');
+   }
+   return object;
+}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = objetoEspejo;

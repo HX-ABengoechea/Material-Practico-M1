@@ -19,7 +19,16 @@ savecache(2); ---> Devuelve "4", guardándolo primero en cache.
 savecache(2); ---> Devuelve "4", pero obtenido del cache previamente guardado.
 */
 
-function closureCacheFunction(callback) {}
+function closureCacheFunction(callback) {
+   var obj = {};
+
+   return function (arg) {
+      if (!obj.hasOwnProperty(arg)) {
+         obj[arg] = callback(arg);
+      }
+      return obj[arg];
+   };
+}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = closureCacheFunction;
