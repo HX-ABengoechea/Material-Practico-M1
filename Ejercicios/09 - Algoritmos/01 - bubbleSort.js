@@ -14,7 +14,23 @@ INPUT ----> [2, 6, 5, 3, 8, 5, 0]
 OUTPUT ---> [0, 2, 3, 5, 5, 6, 8]
 */
 
-function bubbleSort(array) {}
+function bubbleSort(array) {
+   let swap = true;
+
+   while (swap) {
+      swap = false;
+      for (let i = 0; i < array.length - 1; i++) {
+         if (array[i] > array[i + 1]) {
+            var aux = array[i];
+            array[i] = array[i + 1];
+            array[i + 1] = aux;
+            swap = true;
+         }
+      }
+   }
+
+   return array;
+}
 
 /*⚠️ No modifiques nada debajo de esta linea ⚠️*/
 module.exports = bubbleSort;
